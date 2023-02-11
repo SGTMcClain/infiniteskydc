@@ -1,7 +1,4 @@
-<!-- <mat-toolbar color="primary">InfiniteSkyDC</mat-toolbar>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
-
-<app-sidenav>
+<!-- <app-sidenav>
   <div class="container">
     <h1 class="mat-display-3">Main Content</h1>
     <p>
@@ -10,4 +7,12 @@
       veritatis cupiditate.
     </p>
   </div>
-</app-sidenav>
+</app-sidenav> -->
+
+<router-outlet></router-outlet>
+
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <a routerLink="/shop" routerLinkActive="active">Contact</a>
+</nav>
