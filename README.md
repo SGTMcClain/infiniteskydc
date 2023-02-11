@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## CSS Theme
+Used [Custom Them for Angular Material Components Series: Part 1](https://indepth.dev/posts/1320/custom-theme-for-angular-material-components-series-part-1-create-a-theme) To set up the CSS theme
+
+# Starting Stack
+
+- JS Framework: Angular 15.1.3
+- Angular CLI 15.1.4
+- Node: 18.14.0
+- npm 9.3.1
+- DataBase: Google Firebase
+- Video Hosting: Youtube
+- Photo Hosting: ?
+- ECommerce: Shopify? (For now)

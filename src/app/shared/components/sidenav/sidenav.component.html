@@ -1,0 +1,49 @@
+<div [class.dark-theme]="isDark">
+    <mat-toolbar [color]="themeColor">
+        <span>Toolbar</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button (click)="toggleTheme()" matTootip="Toggle Dark Theme">
+            <mat-icon>brightness_6</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu" class="menu-button" matTooltip="Select a theme color">
+            {{themeColor}}
+        </button>
+        
+        <ng-template #noRadio>radio_button_unchecked</ng-template>
+        
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="themeColor = 'primary'">
+                <mat-icon [color]="themeColor === 'primary' ? 'primary' : 'no-color'">
+                    <ng-container *ngIf="themeColor === 'primary'; else noRadio">radio_button_checked</ng-container>
+                </mat-icon>
+                Primary
+            </button>
+            <button mat-menu-item (click)="themeColor = 'warn'">
+                <mat-icon [color]="themeColor === 'warn' ? 'warn' : 'no-color'">
+                    <ng-container *ngIf="themeColor === 'warn'; else noRadio">radio_button_checked</ng-container>
+                </mat-icon>
+                Warn
+            </button>
+            <button mat-menu-item (click)="themeColor = 'accent'">
+                <mat-icon [color]="themeColor === 'accent' ? 'accent' : 'no-color'">
+                    <ng-container *ngIf="themeColor === 'accent'; else noRadio">radio_button_checked</ng-container>
+                </mat-icon>
+                Accent
+            </button>
+        </mat-menu>
+        <span>infiniteSkyDC</span>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="side" opened>
+            <mat-nav-list>
+                <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
+                <a mat-list-item routerLink="/contact" routerLinkActive="active">Contact</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <!-- <router-outlet></router-outlet> -->
+            <ng-content></ng-content>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
