@@ -9,10 +9,29 @@
   </div>
 </app-sidenav> -->
 
-<router-outlet></router-outlet>
 
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
-  <a routerLink="/about" routerLinkActive="active">About</a>
-  <a routerLink="/shop" routerLinkActive="active">Contact</a>
-</nav>
+<span >  
+  <mat-toolbar>
+      <img class = "leftLogo" src="assets/images/logo.svg" alt="Infinite Sky DC logo" />
+
+
+      <h1 class="title">Infinite Sky DC</h1>
+
+    
+    <span class="menuButtons">
+      <span class="link">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </span>
+      <span class="link">
+        <a routerLink="/shop" routerLinkActive="active">Shop</a>
+      </span>
+      <span class="link">
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </span>
+    </span>
+
+  </mat-toolbar>
+</span>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

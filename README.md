@@ -1,5 +1,7 @@
 # InfiniteSkyDC
 
+[![Deploy to Firebase Hosting on master](https://github.com/SGTMcClain/infiniteskydc/actions/workflows/firebase-hosting-merge.yml/badge.svg?branch=master)](https://github.com/SGTMcClain/infiniteskydc/actions/workflows/firebase-hosting-merge.yml)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
