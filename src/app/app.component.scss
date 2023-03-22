@@ -1,59 +1,45 @@
-
-.container {
-    padding: 8px;
-}
-
 a {
     text-decoration: none;
 }
-
-mat-toolbar {
-    display: grid;
-    grid-template-columns: .2fr .8fr 1fr 2fr;
-    grid-gap: 10px;
-    padding: 0px 10px 20px;
-    column-gap: 0px;
-}
-
-.leftLogo {
-    display: inline-block;
-    grid-column: 1;
-    grid-row: 1;
-    padding: 10px;
-    text-align: left;
-}
-
-.title {
-    grid-column: 2;
-    grid-row: 1;
-    padding: 0px;
-    text-align: left;
-}
-
-.menuButtons {
-    grid-column: 4;
-    grid-row: 1;
-    padding: 0px;
-    text-align: center;
-    text-decoration: initial;
-}
-
-.link {
-    margin: 20px;
-    padding: 20px;
-    width: 100%;
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
 }
 
+mat-toolbar{
+    border-radius: 3px;
+}
 
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
 
-.menuIcon {
+mat-sidenav {
+    width: 250px;
+}
 
-    grid-column: 5;
-    grid-row: 1;
-    box-sizing: content-box;
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 10px;
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.leftLogo {
+    margin: 0px 10px;
+    max-height: 75px;
+    min-height: 75px;
 }
 
 .content {
     margin: 0% 2%;
 }
+
