@@ -1,0 +1,29 @@
+<h1>My Resume</h1>
+<mat-card class="item" *ngIf="resumeHeader" (dblclick)="editHeader.emit(resumeHeader)">
+    <h3>{{ resumeHeader.name.first }} {{resumeHeader.name.last}}</h3>
+    <p>
+        {{resumeHeader.email}}
+    </p>
+</mat-card>
+<h2>Work History</h2>
+<div *ngFor="let resumeExperience of experiences" >
+    <mat-card class="item" *ngIf="resumeExperience" (dblclick)="editExperience.emit(resumeExperience)">
+        <h3>{{ resumeExperience.title }}</h3>
+        <p>{{ resumeExperience.company }}</p>
+        <p>
+            {{ resumeExperience.startDate | date:'yyyy-MMM'}} - <span *ngIf="!resumeExperience.isCurrentEmployment; else presentEndDate">{{ resumeExperience.endDate | date:'yyyy-MMM' }}</span></p>
+        <p> {{ resumeExperience.description }}</p>
+        <ng-template #presentEndDate>Present</ng-template>
+    </mat-card>
+</div>
+<h2>Education</h2>
+<div *ngFor="let school of schools" >
+    <mat-card class="item" *ngIf="school" (dblclick)="editEducation.emit(school)">
+        <h3>{{ school.school }}</h3>
+        <p>{{ school.degreeType }}</p>
+        <p>
+            {{ school.startDate | date:'yyyy'}} - {{ school.endDate | date:'yyyy-MMM' }}</p>
+        <p> {{ school.description }}</p>
+        <ng-template #presentEndDate>Present</ng-template>
+    </mat-card>
+</div>

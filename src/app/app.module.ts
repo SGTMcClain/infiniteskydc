@@ -18,13 +18,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ResumeComponent } from './resume/resume.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ShopComponent
+    ShopComponent,
+    ResumeComponent
   ], 
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatListModule,
     MatSidenavModule,
     MatButtonModule,
+    MatCardModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

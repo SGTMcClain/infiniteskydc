@@ -9,7 +9,7 @@ import { OutletContext } from '@angular/router';
 export class AppComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
   title = 'infiniteSkyDC';
-
+  
   constructor() {
 
   }
