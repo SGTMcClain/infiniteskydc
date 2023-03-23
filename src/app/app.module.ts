@@ -1,11 +1,13 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { environment } from 'src/environment/environment';
 
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ShopComponent } from './shop/shop.component';
+import { ResumeComponent } from './resume/resume.component';
 
 // Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -17,9 +19,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { ResumeComponent } from './resume/resume.component';
 import { MatCardModule } from '@angular/material/card';
+
+// Angular Fire
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore  } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { MatCardModule } from '@angular/material/card';
     ResumeComponent
   ], 
   imports: [
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
