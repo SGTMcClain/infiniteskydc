@@ -1,12 +1,85 @@
+.mdc-list-item__primary-text{
+    color: white !important;
+    :visited {
+        color: white !important;
+    }
+}
+ 
+ /* Style the video: 100% width and height to cover the entire window */
+ #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content_main {
+    position: fixed;
+
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 5px;
+  }
+  
+
+  .video-container{
+    width: 100vw;
+    height: 100vh;
+  }
+  
+   iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  #pageContent{
+    position: absolute;
+    color: #FFFFFF;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+  }
+  
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 100%;
+    }
+}
+
 a {
     text-decoration: none;
 }
+
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
+    color: white;
 }
 
 mat-toolbar{
     border-radius: 3px;
+    color: white;
+    background: none;
+    :visited {
+        color: white;
+    }
+}
+
+.mat-drawer-container {
+    background: none;
 }
 
 @media(max-width: 959px){
@@ -17,6 +90,11 @@ mat-toolbar{
 
 mat-sidenav {
     width: 250px;
+    background-color: rgba(238, 237, 237, 0.5);
+    color: white;
+    :visited {
+        color: white;
+    }
 }
 
 .navigation-items{
@@ -42,4 +120,6 @@ main {
 .content {
     margin: 0% 2%;
 }
+
+
 
