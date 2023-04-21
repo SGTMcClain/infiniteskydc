@@ -1,31 +1,43 @@
-<mat-toolbar color="secondary">
-  <div >     
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </div>
-  <img class = "leftLogo" src="assets/images/logo.svg" alt="Infinite Sky DC logo" />
-  <div>
-    <a routerLink="/home" routerLinkActive="active">Infinite Sky DC</a>
-  </div>
+<!-- <video autoplay muted loop id="myVideo">
+  <source src="https://www.youtube.com/embed/BokyQyBJax0" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> -->
 
-</mat-toolbar>
+<div class="video-container" id="myvideo">
+  <iframe src="https://www.youtube.com/embed/BokyQyBJax0?controls=0&disablekb=1&modestbranding=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=BokyQyBJax0"></iframe>
+</div>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" opened="false" class="sidenav" role="navigation">
-    <mat-nav-list>
-      <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-      <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
-      <a mat-list-item routerLink="/shop" routerLinkActive="active">Shop</a>
-      <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content class="content">
-    <div (sidenavToggle)="sidenav.toggle()"></div>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="content_main" id="pageContent">
+  <mat-toolbar color="secondary">
+    <div >     
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <img class = "leftLogo" src="assets/images/logo.svg" alt="Infinite Sky DC logo" />
+    <div>
+      <a routerLink="/home" routerLinkActive="active">Infinite Sky DC</a>
+    </div>
+  
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="false" class="sidenav" role="navigation">
+      <mat-nav-list class="matNavList">
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+        <a mat-list-item routerLink="/shop" routerLinkActive="active">Shop</a>
+        <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+      <div (sidenavToggle)="sidenav.toggle()"></div>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
 
 
