@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -18,5 +18,271 @@
 <body class="mat-typography, mat-app-background">
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Sky DC | Professional Drone Services</title>
+    <style>
+        /* --- GLOBAL STYLES --- */
+        :root {
+            --primary-blue: #3651a3; /* Matches your logo wings */
+            --dark-text: #1a1a1a;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 50px; /* Adjust based on your logo file */
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            font-weight: 500;
+            color: var(--dark-text);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary-blue); }
+
+        .cta-button {
+            background-color: var(--primary-blue);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('YOUR-ESTATE-DAY-PHOTO.jpg'); /* REPLACE THIS */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 5rem 10%;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover { transform: translateY(-5px); }
+
+        .service-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-content { padding: 1.5rem; }
+
+        /* --- PORTFOLIO --- */
+        .portfolio {
+            padding: 5rem 10%;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .portfolio-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover img { transform: scale(1.05); }
+
+        /* --- TRUST & CONTACT --- */
+        .trust-banner {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 3rem 10%;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .trust-item { margin: 1rem; font-size: 1.2rem; font-weight: bold; }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; }
+            .nav-links { margin-top: 1rem; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="YOUR-LOGO.png" alt="Infinite Sky DC Logo"> 
+        </div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact" class="cta-button">Get a Quote</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Infinite Sky DC</h1>
+        <p>Premium Aerial Imagery & Inspection Services</p>
+        <a href="#contact" class="cta-button">View Service Areas</a>
+    </header>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Capabilities</h2>
+        <div class="service-grid">
+            
+            <div class="service-card">
+                <img src="YOUR-NIGHT-ESTATE-PHOTO.jpg" alt="Luxury Real Estate Drone" class="service-img">
+                <div class="service-content">
+                    <h3>Real Estate Marketing</h3>
+                    <p>Showcase properties in their best light. From twilight exteriors to expansive acreage overviews.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="YOUR-TURBINE-PHOTO.jpg" alt="Industrial Inspection" class="service-img">
+                <div class="service-content">
+                    <h3>Infrastructure Inspection</h3>
+                    <p>High-resolution inspection for towers, roofs, and hard-to-reach assets. Safe, fast, and insured.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="YOUR-PARKING-LOT-PHOTO.jpg" alt="Commercial Mapping" class="service-img">
+                <div class="service-content">
+                    <h3>Commercial Mapping</h3>
+                    <p>Ortho-mosaic mapping and progress monitoring for construction sites and commercial developments.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="trust-banner">
+        <div class="trust-item">✓ FAA Part 107 Licensed Pilot</div>
+        <div class="trust-item">✓ Fully Insured</div>
+        <div class="trust-item">✓ DC FRZ Authorized*</div>
+    </div>
+
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title" style="text-align: center;">Selected Works</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img src="YOUR-PIER-PHOTO.jpg" alt="Pier"></div>
+            <div class="portfolio-item"><img src="YOUR-POOL-PHOTO.jpg" alt="Pool"></div>
+            <div class="portfolio-item"><img src="YOUR-FOREST-PANORAMA.jpg" alt="Landscape"></div>
+             <div class="portfolio-item"><img src="YOUR-LAKE-PHOTO.jpg" alt="Lake"></div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Ready to fly?</h2>
+        <p>Serving Washington DC, Northern Virginia, and Maryland.</p>
+        <br>
+        <a href="mailto:info@infiniteskydc.com" class="cta-button" style="background: white; color: var(--primary-blue) !important;">Contact Us</a>
+        <p style="margin-top: 2rem; font-size: 0.8rem;">© 2026 Infinite Sky DC. *Operations in restricted zones subject to waiver approval.</p>
+    </footer>
+
 </body>
 </html>
